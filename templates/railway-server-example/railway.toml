@@ -9,6 +9,5 @@ healthcheckTimeout = 30
 restartPolicyType = "on_failure"
 restartPolicyMaxRetries = 3
 
-[[volumes]]
-mountPath = "/data"
-name = "tldraw-data"
+# NOTE: Railway does not create volumes through railway.toml. After the first
+# deploy, attach a volume to this service at /data so rooms and assets persist.

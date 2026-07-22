@@ -19,11 +19,12 @@ This starts both the server (port 5858) and Vite client (port 5757) with hot rel
 
 ### Railway deployment
 
-1. Click the deploy button above, or run `railway up` from the repository root
-2. Set the Dockerfile path to `templates/railway-server-example/Dockerfile`
-3. Add a `VITE_TLDRAW_LICENSE_KEY` environment variable with your tldraw license key. The SDK requires a valid license key to render in production. You can get a free trial license at [tldraw.dev/pricing](https://tldraw.dev/pricing).
-4. Railway will build using the included `Dockerfile` and `railway.toml`
-5. A volume is automatically mounted at `/data` for persistence (rooms + assets survive redeploys)
+1. Click the deploy button above, or run `railway up` from `templates/railway-server-example`
+2. Add a `VITE_TLDRAW_LICENSE_KEY` environment variable with your tldraw license key. The SDK requires a valid license key to render in production. You can get a free trial license at [tldraw.dev/pricing](https://tldraw.dev/pricing).
+3. Attach a Railway volume to the service at `/data`. Rooms and uploaded assets are stored there, so they survive redeploys. Without a volume, the SQLite database and assets are lost when the container restarts.
+4. Redeploy after adding the variable and volume.
+
+Railway builds using the included `Dockerfile` and `railway.toml`.
 
 **Environment variables:**
 
