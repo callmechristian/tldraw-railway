@@ -2,7 +2,7 @@
 
 This is a tldraw sync backend designed for deployment on [Railway](https://railway.app). It includes a Dockerfile, Railway config, and production-ready server with SQLite persistence.
 
-[![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/new?template=https://github.com/callmechristian/tldraw-railway/tree/main/templates/railway-server-example)
+[![Deploy on Railway](https://railway.app/button.svg)](https://railway.com/template/FR4PfS)
 
 ## Quick start
 
